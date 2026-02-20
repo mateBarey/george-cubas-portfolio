@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Github, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react"
 
 export function HeroSection() {
@@ -99,24 +100,22 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right column: visual element */}
+          {/* Right column: profile photo */}
           <div className="relative hidden lg:flex lg:items-center lg:justify-center">
             <div className="relative h-80 w-80">
-              {/* Outer ring */}
+              {/* Glow ring behind photo */}
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary/30 via-transparent to-secondary/30 blur-md" />
               <div className="absolute inset-0 rounded-full border border-primary/20" />
-              <div className="absolute inset-4 rounded-full border border-secondary/15" />
-              <div className="absolute inset-8 rounded-full border border-primary/10" />
 
-              {/* Central element */}
-              <div className="absolute inset-12 flex items-center justify-center rounded-full bg-primary/5 backdrop-blur-sm">
-                <div className="flex flex-col items-center gap-2">
-                  <span className="font-mono text-5xl font-bold text-primary">
-                    ML
-                  </span>
-                  <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                    Engineer
-                  </span>
-                </div>
+              {/* Profile image */}
+              <div className="absolute inset-1 overflow-hidden rounded-full border-2 border-border">
+                <Image
+                  src="/images/george-cubas.jpg"
+                  alt="George Cubas"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Floating skill badges */}
