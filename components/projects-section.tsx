@@ -26,15 +26,15 @@ const projects = [
     accent: "secondary",
   },
   {
-    title: "Reinforcement Learning NN",
-    subtitle: "Actor-Critic for CartPole",
+    title: "Stack Prediction Ensemble",
+    subtitle: "Autoencoder + XGBoost Stacking for Crypto",
     description:
-      "An Actor-Critic reinforcement learning algorithm that uses an actor network for optimal policy discovery and a critic network for action probability evaluation to solve the CartPole problem.",
-    role: "ML Researcher",
-    stack: ["Python", "PyTorch", "OpenAI Gym", "RL"],
-    impact: "Convergent policy with optimized reward function",
+      "Ray-distributed pipeline that fetches live OHLCV candles via CCXT, computes TA-Lib indicators (MACD, RSI, OBV), encodes normalized close prices through a PyTorch autoencoder, trains five sklearn regressors on the latent space, and stacks their outputs with XGBoost. All models export to ONNX and TorchScript for sub-millisecond inference across 60+ perpetual futures tickers.",
+    role: "ML Engineer",
+    stack: ["Python", "PyTorch", "XGBoost", "ONNX", "Ray", "TA-Lib", "CCXT"],
+    impact: "Sub-ms ensemble inference across 60+ crypto tickers via ONNX",
     icon: <Database size={20} />,
-    github: "https://github.com/mateBarey/Reinforcement-Learning",
+    github: "https://github.com/mateBarey/stack-prediction-ensemble",
     accent: "primary",
   },
 ]
